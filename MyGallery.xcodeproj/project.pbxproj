@@ -16,6 +16,7 @@
 		EA177AE7278F622900DE00C3 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177AE6278F622900DE00C3 /* GalleryViewController.swift */; };
 		EA177AEA278F680E00DE00C3 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177AE9278F680E00DE00C3 /* GalleryPresenter.swift */; };
 		EA177AEC278F682300DE00C3 /* GalleryPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177AEB278F682300DE00C3 /* GalleryPresenterProtocol.swift */; };
+		EA177AEE278F6C8B00DE00C3 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177AED278F6C8B00DE00C3 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EA177AE6278F622900DE00C3 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		EA177AE9278F680E00DE00C3 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		EA177AEB278F682300DE00C3 /* GalleryPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterProtocol.swift; sourceTree = "<group>"; };
+		EA177AED278F6C8B00DE00C3 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,7 @@
 				EA177ACF278F605B00DE00C3 /* SceneDelegate.swift */,
 				EA177AE1278F612400DE00C3 /* Coordinator */,
 				EA177AE8278F623200DE00C3 /* GalleryViewController */,
-				EA177AD6278F605D00DE00C3 /* Assets.xcassets */,
-				EA177AD8278F605D00DE00C3 /* LaunchScreen.storyboard */,
-				EA177ADB278F605D00DE00C3 /* Info.plist */,
+				EA177AF0278F6CB700DE00C3 /* Source */,
 			);
 			path = MyGallery;
 			sourceTree = "<group>";
@@ -88,8 +88,27 @@
 				EA177AE6278F622900DE00C3 /* GalleryViewController.swift */,
 				EA177AE9278F680E00DE00C3 /* GalleryPresenter.swift */,
 				EA177AEB278F682300DE00C3 /* GalleryPresenterProtocol.swift */,
+				EA177AEF278F6C9100DE00C3 /* GalleryCollectionViewCells */,
 			);
 			path = GalleryViewController;
+			sourceTree = "<group>";
+		};
+		EA177AEF278F6C9100DE00C3 /* GalleryCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA177AED278F6C8B00DE00C3 /* GalleryCollectionViewCell.swift */,
+			);
+			path = GalleryCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		EA177AF0278F6CB700DE00C3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EA177AD6278F605D00DE00C3 /* Assets.xcassets */,
+				EA177AD8278F605D00DE00C3 /* LaunchScreen.storyboard */,
+				EA177ADB278F605D00DE00C3 /* Info.plist */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA177ACE278F605B00DE00C3 /* AppDelegate.swift in Sources */,
+				EA177AEE278F6C8B00DE00C3 /* GalleryCollectionViewCell.swift in Sources */,
 				EA177AEA278F680E00DE00C3 /* GalleryPresenter.swift in Sources */,
 				EA177AD0278F605B00DE00C3 /* SceneDelegate.swift in Sources */,
 				EA177AE7278F622900DE00C3 /* GalleryViewController.swift in Sources */,
@@ -311,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TLX89AH7T8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyGallery/Info.plist;
+				INFOPLIST_FILE = MyGallery/Source/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -339,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TLX89AH7T8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyGallery/Info.plist;
+				INFOPLIST_FILE = MyGallery/Source/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
