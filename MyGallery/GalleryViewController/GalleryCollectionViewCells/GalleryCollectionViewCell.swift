@@ -13,14 +13,20 @@ class GalleryCollectionViewCell: UICollectionViewCell {
 // MARK: - Private properties for Cell
     private var userName: UILabel = {
         let label = UILabel()
+        label.text = "UserName"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private var userURL: UILabel = {
         let label = UILabel()
+        label.text = "UserURL"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private var photoURL: UILabel = {
         let label = UILabel()
+        label.text = "PhotoURL"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private var mainImage: UIImageView = {
@@ -40,11 +46,20 @@ class GalleryCollectionViewCell: UICollectionViewCell {
 // MARK: - Method for Setup Cell
     private func setupCell() {
         addSubview(mainImage)
+        addSubview(userName)
+        addSubview(photoURL)
+        addSubview(userURL)
         NSLayoutConstraint.activate([
             mainImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             mainImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             mainImage.topAnchor.constraint(equalTo: self.topAnchor),
-            mainImage.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            mainImage.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            userName.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            userName.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            photoURL.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            photoURL.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -32),
+            userURL.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            userURL.bottomAnchor.constraint(equalTo: photoURL.topAnchor, constant: -32)
         ])
     }
 }
