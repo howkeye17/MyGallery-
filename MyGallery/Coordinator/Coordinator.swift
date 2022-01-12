@@ -22,8 +22,9 @@ class Coordinator: CoordinatorProtocol {
 // MARK: - Gallery Coordinator Protocol
 extension Coordinator: GalleryCoordinatorProtocol {
     func startGalleryScene() {
-        let vc = GalleryViewController()
-        window?.rootViewController = vc
+        let galleryPresenter = GalleryPresenter()
+        let galleryVC = GalleryViewController(galleryPresenter: galleryPresenter)
+        window?.rootViewController = galleryVC
         window?.makeKeyAndVisible()
     }
 }
