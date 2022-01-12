@@ -23,7 +23,13 @@ class Coordinator: CoordinatorProtocol {
 extension Coordinator: GalleryCoordinatorProtocol {
     func startGalleryScene() {
         let galleryPresenter = GalleryPresenter()
-        let galleryVC = GalleryViewController(galleryPresenter: galleryPresenter)
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.minimumLineSpacing = 0
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: flowLayout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        let galleryVC = GalleryViewController(collectionView: collectionView, galleryPresenter: galleryPresenter)
         window?.rootViewController = galleryVC
         window?.makeKeyAndVisible()
     }
